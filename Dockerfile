@@ -28,6 +28,8 @@ RUN \
     libqrencode-tools \
     net-tools \
     nftables \
+    # INSTALLING OPENJDK FOR JAVA
+    openjdk21\
     openresolv \
     wireguard-tools==${WIREGUARD_RELEASE} && \
   echo "wireguard" >> /etc/modules && \
@@ -41,6 +43,9 @@ RUN \
 
 # add local files
 COPY /root /
+
+# COPY LIB FOLDER FOR 'wireguard-launcher.jar'
+COPY /lib /lib
 
 # ports and volumes
 EXPOSE 51820/udp
