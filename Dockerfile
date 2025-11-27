@@ -28,8 +28,8 @@ RUN \
     libqrencode-tools \
     net-tools \
     nftables \
-    # INSTALLING OPENJDK FOR JAVA
-    openjdk21\
+    # INSTALLING OPENJDK21_JRE FOR JAVA
+    openjdk21-jre\
     openresolv \
     wireguard-tools==${WIREGUARD_RELEASE} && \
   echo "wireguard" >> /etc/modules && \
