@@ -47,5 +47,8 @@ COPY /root /
 # COPY LIB FOLDER FOR 'wireguard-launcher.jar'
 COPY /lib /lib
 
+# Make shell scripts executable
+RUN chmod +x /app/wg-service.sh /app/wg-peers.sh
+
 # ports and volumes
 EXPOSE 51820/udp
